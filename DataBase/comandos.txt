@@ -1,0 +1,22 @@
+CREATE TABLE curso_usuario
+(
+  id varchar2(500) not null,
+  usuario varchar2(20) not null,
+  nome varchar2(50) not null,
+  senha varchar2(255) not null,
+  dt_atualizacao datetime,
+  CONSTRAINT usuario_pk PRIMARY KEY (usuario, nome)
+);
+
+CREATE TABLE curso_tarefa
+(
+  id varchar2(500) not null,
+  usuario varchar2(20) not null,
+  titulo varchar2(50) not null,
+  descricao varchar2(100) not null,
+  dt_inicio datetime,
+  dt_fim datetime, 
+  prioridade varchar2(15) not null,
+  dt_criacao datetime,
+  CONSTRAINT tarefa_pk PRIMARY KEY (usuario, titulo)
+);
